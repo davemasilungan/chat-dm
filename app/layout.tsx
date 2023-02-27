@@ -1,22 +1,17 @@
-import './globals.css';
-// import Head from "./head"
+import Sidebar from "@/components/Sidebar";
+import "../styles/globals.css";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head />
       <body>
-        <div>
-          {/* SideBar */}
+        <div className="flex">
+          <Sidebar />
           {/* ClientProvider - Notification */}
-          <div>{children}</div>
-
+          <div className="bg-[#343541] flex-1">{children}</div>
         </div>
-        </body>
+      </body>
     </html>
-  )
+  );
 }

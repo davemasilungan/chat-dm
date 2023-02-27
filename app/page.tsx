@@ -1,50 +1,54 @@
-import * as React from "react";
-import { BeakerIcon } from "@heroicons/react/24/solid";
+import { SunIcon, BoltIcon, ExclamationTriangleIcon } from "@heroicons/react/24/solid";
 
 export interface IAppProps {}
 
-export default function App(props: IAppProps) {
+function HomePage(props: IAppProps) {
   return (
-    <div className="flex flex-col items-center justify-center h-screen text-white">
-      <h1 className="text-5xl font-bold mb-20">CHAT DM</h1>
+    <div className="flex flex-col items-center justify-center h-screen px-4 text-white">
+      <h1 className="text-5xl font-bold mb-4">CHAT DM</h1>
+      <p className="mb-10">
+        A ChatGPT clone built with Nextjs, Typescript, TailwindCSS, and Firebase db
+      </p>
 
-      <div className="flex">
+      <div className="flex space-x-4 text-center">
         <div>
           <div className="flex flex-col items-center justify-center mb-5">
-            <BeakerIcon className="h-6 w-6 text-blue-500" />
+            <SunIcon className="h-8 w-8" />
             <h2>Examples</h2>
           </div>
-          <div className="space-y-2">
-            <p className="infoText">{"Explain REST API's to me"}</p>
-            <p className="infoText">{"What is the difference between Java and JavaScript?"}</p>
-            <p className="infoText">{"Was this a bug or a feature?"}</p>
+          <div className="space-y-4">
+            <p className="infoText">"As a Web Developer, explain REST API's to me"</p>
+            <p className="infoText">"What is the difference between Java and JavaScript?"</p>
+            <p className="infoText">"Are there any famous bugs that became a feature?"</p>
           </div>
         </div>
 
         <div>
           <div className="flex flex-col items-center justify-center mb-5">
-            {/* Sun Icon */}
-            <h2>Examples</h2>
+            <BoltIcon className="h-8 w-8" />
+            <h2>Capabilities</h2>
           </div>
-          <div className="space-y-2">
-            <p className="infoText">{"Explain REST API's to me"}</p>
-            <p className="infoText">{"What is the difference between Java and JavaScript?"}</p>
-            <p className="infoText">{"Was this a bug or a feature?"}</p>
+          <div className="space-y-4">
+            <p className="infoText">"Change the ChatGPT Model to use"</p>
+            <p className="infoText">"Messages are stored in Firebase's Firestore db"</p>
+            <p className="infoText">"Hot Toast notifications when Chat-DM is thinking!"</p>
           </div>
         </div>
 
         <div>
           <div className="flex flex-col items-center justify-center mb-5">
-            {/* Sun Icon */}
-            <h2>Examples</h2>
+            <ExclamationTriangleIcon className="h-8 w-8" />
+            <h2>Limitations</h2>
           </div>
-          <div className="space-y-2">
-            <p className="infoText">{"Explain REST API's to me"}</p>
-            <p className="infoText">{"What is the difference between Java and JavaScript?"}</p>
-            <p className="infoText">{"Was this a bug or a feature?"}</p>
+          <div className="space-y-4">
+            <p className="infoText">"May occasionally generate incorrect information"</p>
+            <p className="infoText">"May produce harmful or baised instructions or content"</p>
+            <p className="infoText">"Limited knowledge of world and events after"</p>
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+export default HomePage;
