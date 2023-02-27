@@ -12,7 +12,7 @@ export default function RootLayout({
       <body>
         <div>
           {/* SideBar */}
-          {/* ClietProvider - Notification */}
+          {/* ClientProvider - Notification */}
           <div>{children}</div>
 
         </div>
