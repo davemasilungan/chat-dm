@@ -1,3 +1,5 @@
+import NewChat from "./NewChat";
+
 type Props = {};
 
 const Sidebar = ({}: Props) => {
@@ -5,7 +7,7 @@ const Sidebar = ({}: Props) => {
     <div className="p-2 flex flex-col h-screen">
       <div className="flex-1">
         <div>
-          {/* New Chat Button */}
+          <NewChat />
 
           <div>{/* Select Chat Model */}</div>
 
