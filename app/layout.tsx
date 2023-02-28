@@ -1,7 +1,8 @@
 import Sidebar from "@/components/Sidebar";
+import Login from "@/components/Login";
 import SessionProvider from "@/components/SessionProvider";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
 import "../styles/globals.css";
 
@@ -14,7 +15,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body>
         <SessionProvider session={session}>
           {!session ? (
-            <div>test</div>
             <Login />
           ) : (
             <div className="flex">

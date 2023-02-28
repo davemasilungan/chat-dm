@@ -1,8 +1,6 @@
 import NewChat from "./NewChat";
 
-type Props = {};
-
-const Sidebar = ({}: Props) => {
+function Sidebar() {
   return (
     <div className="p-2 flex flex-col h-screen">
       <div className="flex-1">
@@ -16,6 +14,6 @@ const Sidebar = ({}: Props) => {
       </div>
     </div>
   );
-};
+}
 
 export default Sidebar;
