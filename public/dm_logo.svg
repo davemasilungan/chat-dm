@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .c {
+        fill: #493846;
+      }
+
+      .d {
+        fill: #833e72;
+      }
+
+      .e {
+        fill: #aa4292;
+      }
+
+      .f {
+        fill: url(#b);
+      }
+    </style>
+    <linearGradient id="b" x1="22.38" y1="22.38" x2="477.62" y2="477.62" gradientUnits="userSpaceOnUse">
+      <stop offset=".5" stop-color="#1b1b1b"/>
+      <stop offset=".5" stop-color="#000"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <rect class="f" x="13" y="13" width="474" height="474" rx="32" ry="32"/>
+    <path class="e" d="m455,26c10.48,0,19,8.52,19,19v410c0,10.48-8.52,19-19,19H45c-10.48,0-19-8.52-19-19V45c0-10.48,8.52-19,19-19h410m0-26H45C20.15,0,0,20.15,0,45v410c0,24.85,20.15,45,45,45h410c24.85,0,45-20.15,45-45V45c0-24.85-20.15-45-45-45h0Z"/>
+  </g>
+  <g>
+    <polygon class="d" points="76.57 76.83 76.57 423.5 159.83 340.63 159.83 160.54 76.57 76.83"/>
+    <polygon class="e" points="341.01 423.5 76.57 423.5 159.83 340.63 341.01 340.63 341.01 160 250.71 251.92 76.57 76.83 336.91 76.83 423.1 162.62 423.1 340.63 341.01 423.5"/>
+    <polygon class="c" points="159.83 340.63 250.71 251.92 159.83 160.54 159.83 340.63"/>
+  </g>
+</svg>
