@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
+'use client';
 
-import NewChat from "./NewChat";
-import { useSession, signOut } from "next-auth/react";
+import NewChat from './NewChat';
+import { useSession, signOut } from 'next-auth/react';
 
 function Sidebar() {
   const { data: session } = useSession();
