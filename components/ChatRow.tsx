@@ -9,6 +9,8 @@ import { db } from '@/firebase';
 
 type Props = {
   id: string;
+  key: string;
+  className?: string;
 };
 
 function ChatRow({ id }: Props) {

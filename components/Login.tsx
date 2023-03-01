@@ -2,9 +2,7 @@
 import { signIn } from 'next-auth/react';
 import Image from 'next/image';
 
-type Props = {};
-
-function Login(props: Props) {
+function Login() {
   return (
     <div
       className="bg-[#202123] h-screen flex flex-col items-center

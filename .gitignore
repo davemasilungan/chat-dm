@@ -42,3 +42,6 @@ next-env.d.ts
 #linting
 .eslintrc.json
 .prettierrc
+
+#firebaseAdmin key
+serviceAccountKey.json

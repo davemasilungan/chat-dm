@@ -24,7 +24,7 @@ function Sidebar() {
 
           {/* Map through Chat Rows */}
           {chats?.docs.map((chat) => (
-            <ChatRow key={chat.id} id={chat.id} className="border border-gray-700 chatRow" />
+            <ChatRow className={`border border-gray-700 chatRow`} key={chat.id} id={chat.id} />
           ))}
         </div>
       </div>
