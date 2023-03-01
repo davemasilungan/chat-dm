@@ -15,14 +15,14 @@ function ChatInput({ chatId }: Props) {
   const [prompt, setPrompt] = useState('');
   const { data: session } = useSession();
 
-  const model = 'davinci-model';
+  const model = 'text-davinci-003';
 
   const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!prompt) return;
-    const input = prompt.trim();
 
+    const input = prompt.trim();
     setPrompt('');
 
     const message: Message = {
@@ -31,7 +31,7 @@ function ChatInput({ chatId }: Props) {
       user: {
         _id: session?.user?.email!,
         name: session?.user?.name!,
-        avatar: session?.user?.image! || `https://ui-avatars.com/api/${session?.user?.name}`,
+        avatar: session?.user?.image! || 'https://links.papareact.com/89k',
       },
     };
 
@@ -61,7 +61,7 @@ function ChatInput({ chatId }: Props) {
     <div className="bg-gray-700/50 text-gray-400 rounded-lg text-sm">
       <form onSubmit={sendMessage} className="p-5 space-x-5 flex">
         <input
-          className="flex-1 bg-transparent focus:outline-none disabled:cursor-not-allowed disabled:text-gray-300"
+          className="flex-1 focus:placeholder-opacity-0 bg-transparent focus:outline-none disabled:cursor-not-allowed disabled:text-gray-300"
           disabled={!session}
           value={prompt}
           type="text"
