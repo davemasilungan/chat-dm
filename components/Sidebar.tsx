@@ -3,6 +3,7 @@
 
 import NewChat from './NewChat';
 import ChatRow from './ChatRow';
+import ModelSelection from './ModelSelection';
 import { useSession, signOut } from 'next-auth/react';
 import { db } from '@/firebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
@@ -20,9 +21,10 @@ function Sidebar() {
         <div>
           <NewChat />
 
-          <div>{/* Select Chat Model */}</div>
+          <div className="hidden sm:inline">
+            <ModelSelection />
+          </div>
 
-          {/* Map through Chat Rows */}
           {chats?.docs.map((chat) => (
             <ChatRow className={`border border-gray-700 chatRow`} key={chat.id} id={chat.id} />
           ))}
