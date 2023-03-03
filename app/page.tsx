@@ -1,4 +1,4 @@
-import { SunIcon, BoltIcon, ExclamationTriangleIcon } from "@heroicons/react/24/solid";
+import { SunIcon, BoltIcon, ExclamationTriangleIcon } from '@heroicons/react/24/solid';
 
 export interface IAppProps {}
 
@@ -6,9 +6,7 @@ function HomePage(props: IAppProps) {
   return (
     <div className="flex flex-col items-center justify-center h-screen px-4 text-white">
       <h1 className="text-5xl font-bold mb-4">CHAT DM</h1>
-      <p className="mb-10">
-        A ChatGPT clone built with Nextjs, Typescript, TailwindCSS, and Firebase db
-      </p>
+      <p className="mb-10">A ChatGPT clone built with Nextjs, Typescript, TailwindCSS, and Firebase db</p>
 
       <div className="flex space-x-4 text-center">
         <div>

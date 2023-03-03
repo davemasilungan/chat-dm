@@ -8,7 +8,7 @@ function Message({ message }: Props) {
   return (
     <div className={`py-5 text-white ${isChatDM && 'bg-[#434654]'}`}>
       <div className="flex space-x-5 px-10 max-w-2xl mx-auto">
-        <img src={message.user.avatar} alt="" className="h-8 w-8" />
+        <img referrerPolicy="no-referrer" src={message.user.avatar} alt="avatar" className="h-10 w-10 rounded-full" />
         <p className="pt-1 text-sm">{message.text}</p>
       </div>
     </div>

@@ -25,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   const message: Message = {
     text: response || 'ChatDM was unable to find the answer for that question. Please try again later.',
-    createdAt: admin.firestore.Timestamp.now(),
+    createdAt: admin.firestore.FieldValue.serverTimestamp(),
     user: {
       _id: 'ChatDM',
       name: 'ChatDM',

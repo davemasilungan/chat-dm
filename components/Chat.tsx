@@ -16,18 +16,18 @@ function Chat({ chatId }: Props) {
   const { data: session } = useSession();
   const [messages] = useCollection(
     session &&
-      query(collection(db, 'users', session?.user?.email!, 'chats', chatId, 'messages'), orderBy('createdAt', 'asc'))
+      query(collection(db, 'users', session?.user?.email!, 'chats', chatId, 'messages'), orderBy('createdAt', 'desc'))
   );
 
   return (
     <div className="flex-1 overflow-y-auto overflow-x-hidden">
       {messages?.empty && (
-        <>
-          <p className="mt-20 text-center text-white">Type in a prompt below to get started</p>
-          <ArrowDownCircleIcon className="h-16 w-16 mx-auto mt-10 text-white animate-bounce" />
-        </>
+        <div className="flex flex-col items-center justify-center h-screen">
+          <p className="mb-10 text-center text-white text-lg">Type in a prompt below to get started</p>
+          <ArrowDownCircleIcon className="h-16 w-16 mx-auto text-white animate-bounce" />
+        </div>
       )}
-      {messages?.docs.map((message) => (
+      {messages?.docs.reverse().map((message) => (
         <Message key={message.id} message={message.data()} />
       ))}
     </div>
