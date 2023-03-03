@@ -16,7 +16,7 @@ function Chat({ chatId }: Props) {
   const { data: session } = useSession();
   const [messages] = useCollection(
     session &&
-      query(collection(db, 'users', session?.user?.email!, 'chats', chatId, 'messages'), orderBy('createdAt', 'desc'))
+      query(collection(db, 'users', session?.user?.email!, 'chats', chatId, 'messages'), orderBy('createdAt', 'asc'))
   );
 
   return (
