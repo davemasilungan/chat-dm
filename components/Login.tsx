@@ -19,7 +19,7 @@ function Login() {
         <p className="text-white mt-2">Built on ChatGPT API and models.</p>
 
         <button
-          onClick={() => signIn('google')}
+          onClick={() => signIn()}
           className="bg-[#2A2D33] text-[#5586CE] font-bold text-3xl animate-pulse px-8 pt-4 pb-5 mt-10 border-gray-700 border-2 rounded-full hover:bg-gray-700/70 hover:border-sky-500 cursor-pointer"
         >
           Sign in to use ChatDM
