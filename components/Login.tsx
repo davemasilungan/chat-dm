@@ -1,18 +1,10 @@
 'use client';
-import { useCallback } from 'react';
 import { signIn } from 'next-auth/react';
 import Image from 'next/image';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
 
 function Login() {
-  const init = useCallback(async (engine: any) => {
-    await loadFull(engine);
-  }, []);
-
   return (
     <>
-      <Particles id="tsparticles" />
       <div className="bg-[#202123] h-screen flex flex-col items-center justify-center text-center">
         <Image src="/dm_logo_blue.svg" width={250} height={250} alt="logo" />
         <h1 className="text-3xl font-medium text-white mt-8">Welcome to ChatDM</h1>
