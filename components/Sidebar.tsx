@@ -31,12 +31,15 @@ function Sidebar() {
         </div>
       </div>
       {session && (
-        <img
-          onClick={() => signOut()}
-          src={session.user?.image!}
-          alt="user-image"
-          className="h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50"
-        />
+        <div onClick={() => signOut()}>
+          <img
+            referrerPolicy="no-referrer"
+            src={session.user?.image!}
+            alt="user-image"
+            className="border-2 border-slate-700 shadow-lg mt-3 h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50"
+          />
+          <p className="mb-3 text-xs text-gray-400 text-center">Click To Signout</p>
+        </div>
       )}
     </div>
   );

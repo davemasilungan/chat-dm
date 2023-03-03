@@ -61,7 +61,7 @@ function ChatInput({ chatId }: Props) {
     <div className="bg-gray-700/50 text-gray-400 rounded-lg text-sm">
       <form onSubmit={sendMessage} className="p-5 space-x-5 flex">
         <input
-          className="flex-1 focus:placeholder-opacity-0 bg-transparent focus:outline-none disabled:cursor-not-allowed disabled:text-gray-300"
+          className="flex-1 text-lg focus:placeholder-opacity-0 bg-transparent focus:outline-none disabled:cursor-not-allowed disabled:text-gray-300"
           disabled={!session}
           value={prompt}
           type="text"
