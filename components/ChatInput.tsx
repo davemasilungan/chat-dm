@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import { PaperAirplaneIcon } from '@heroicons/react/24/solid';
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
-import { useSession } from 'next-auth/react';
-import { FormEvent, useState } from 'react';
-import toast from 'react-hot-toast';
-import { db } from '../firebase';
+import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { useSession } from "next-auth/react";
+import { FormEvent, useState } from "react";
+import toast from "react-hot-toast";
+import { db } from "../firebase";
 
 type Props = {
   chatId: string;
 };
 
 function ChatInput({ chatId }: Props) {
-  const [prompt, setPrompt] = useState('');
+  const [prompt, setPrompt] = useState("");
   const { data: session } = useSession();
 
-  const model = 'text-davinci-003';
+  const model = "text-davinci-003";
 
   const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,7 +23,7 @@ function ChatInput({ chatId }: Props) {
     if (!prompt) return;
 
     const input = prompt.trim();
-    setPrompt('');
+    setPrompt("");
 
     const message: Message = {
       text: input,
@@ -31,18 +31,19 @@ function ChatInput({ chatId }: Props) {
       user: {
         _id: session?.user?.email!,
         name: session?.user?.name!,
-        avatar: session?.user?.image! || 'https://links.papareact.com/89k',
+        avatar: session?.user?.image! || "https://links.papareact.com/89k",
       },
     };
 
-    await addDoc(collection(db, 'users', session?.user?.email!, 'chats', chatId, 'messages'), message);
+    await addDoc(collection(db, "users", session?.user?.email!, "chats", chatId, "messages"), message);
 
-    const notification = toast.loading('ChatDM is thinking...');
-
-    await fetch('/api/askQuestion', {
-      method: 'POST',
+    const notification = toast.loading("ChatDM is thinking...");
+    await fetch("/api/askQuestion", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
         prompt: input,
@@ -51,7 +52,7 @@ function ChatInput({ chatId }: Props) {
         session,
       }),
     }).then(() => {
-      toast.success('ChatDM has responded!', {
+      toast.success("ChatDM has responded!", {
         id: notification,
       });
     });

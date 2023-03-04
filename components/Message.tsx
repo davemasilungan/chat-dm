@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { DocumentData } from 'firebase/firestore';
 import Typewriter from 'typewriter-effect';
 
