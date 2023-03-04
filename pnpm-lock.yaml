@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@heroicons/react': ^2.0.16
+  '@next-auth/firebase-adapter': ^2.0.1
   '@types/node': 18.14.1
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
@@ -28,6 +29,7 @@ specifiers:
 
 dependencies:
   '@heroicons/react': 2.0.16_react@18.2.0
+  '@next-auth/firebase-adapter': 2.0.1_vyuiwefdhcb2lqyqhzkm3hh62i
   csstype: 3.1.1
   firebase: 9.17.1
   firebase-admin: 11.5.0
@@ -825,6 +827,16 @@ packages:
       lodash: 4.17.21
     dev: false
     optional: true
+
+  /@next-auth/firebase-adapter/2.0.1_vyuiwefdhcb2lqyqhzkm3hh62i:
+    resolution: {integrity: sha512-4bQTa+IU8/I/mSOQcnrpQ9BYM6Xpk5BJx1TrxDpk4xKl2z0ZKE7Un+yl+U/9crmfpTvCoLOh6j9axmJMacJV2w==}
+    peerDependencies:
+      firebase-admin: ^11.4.1
+      next-auth: ^4
+    dependencies:
+      firebase-admin: 11.5.0
+      next-auth: 4.19.2_qgtcjgzkkjtbiyvnx7d32fl5vu
+    dev: false
 
   /@next/env/13.2.1:
     resolution: {integrity: sha512-Hq+6QZ6kgmloCg8Kgrix+4F0HtvLqVK3FZAnlAoS0eonaDemHe1Km4kwjSWRE3JNpJNcKxFHF+jsZrYo0SxWoQ==}
