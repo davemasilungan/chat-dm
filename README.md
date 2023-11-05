@@ -1,20 +1,16 @@
-## ChatDM
+# ChatDM
 
-A ChatGPT clone built with:
+## A Chatbot using OpenAI GPT 3.5 API
 
-- OpenAi API - ChatGPT models
-- Nextjs 13 (experimental features)
-- Next Auth
-- Typescript
-- React
-- React firebase hooks
-- React hot toast
-- React select
-- Tailwind CSS
-- SWR (stale while revalidate)
-- Firebase DB
-- Vercel CI/CD through GitHub
-
-
-
-
+* OpenAi API - ChatGPT models
+* Nextjs 13 (experimental features) - using server-side components
+* Next Auth - user authentication
+* Typescript - JavaScript with typing syntax
+* React - front-end framework
+* React firebase hooks - chat message hydration from api
+* React hot toast - error messaging
+* React select - UI component, selection dropdown
+* Tailwind CSS - UI styling
+* SWR (stale while revalidate) - cache control
+* Firebase DB - user and message data storage
+* Vercel - CI/CD through GitHub actions
