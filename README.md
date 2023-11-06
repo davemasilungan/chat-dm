@@ -4,7 +4,6 @@
 
 ## A Chatbot using OpenAI GPT 3.5 API
 
-[![Header](https://github.com/dhipflip/dhipflip/blob/main/banner.png?raw=true "Header")](https://github.com/dhipflip)
 
 * OpenAi API - ChatGPT models
 * Nextjs 13 (experimental features) - using server-side components
@@ -19,3 +18,5 @@
 * Firebase DB - user and message data storage
 * Vercel - CI/CD through GitHub actions
 
+
+[![Header](https://github.com/dhipflip/chat-dm/blob/main/chat-dm.png?raw=true "Header")](https://github.com/dhipflip)
