@@ -19,4 +19,4 @@
 * Vercel - CI/CD through GitHub actions
 
 
-![Header](https://github.com/dhipflip/chat-dm/blob/main/chat-dm.png?raw=true "Header")
+[![Header](https://github.com/dhipflip/chat-dm/blob/main/chat-dm.png?raw=true "Header")](https://github.com/dhipflip/chat-dm)
